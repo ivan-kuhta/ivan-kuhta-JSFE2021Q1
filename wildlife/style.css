@@ -89,6 +89,7 @@ small{
 }
 .row{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -114,8 +115,7 @@ section{
 input{
   background-color: transparent;
   border: 1px solid var(--gray);
-  padding-left: 0.6em;
-  padding-right: 0.6em;
+  padding: 0.674em 0.6em;
   font-size: 2.3rem;
   outline: none;
   color: var(--gray);
@@ -143,6 +143,7 @@ input{
   display: flex;
   align-items: center;
   font-size: 3.2rem;
+  padding-right: 20px;
 }
 .logo img{
   width: 70px;
@@ -153,6 +154,7 @@ input{
 /* Menu */
 .menu, .menu ul{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -195,6 +197,7 @@ input{
 .slider {
   margin-top: 120px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -239,17 +242,17 @@ input{
 }
 
 .form-notified{
-  max-width: 660px;
+  max-width: 661px;
   margin: 0 auto;
 }
 
 .form-notified__group{
   display: flex;
-  height: 60px;
+  flex-wrap: wrap;
 }
 
 .form-notified__input{
-  width: 100%;
+  flex: 1 0 80%;
 }
 
 .form-notified__btn{
@@ -257,4 +260,36 @@ input{
   border-bottom-left-radius: 0;
   padding-left: 1.441em;
   padding-right: 1.441em;
+}
+
+/* Footer */
+footer{
+  padding: 150px 0;
+  background-color: #181617;
+  background: url('./assets/images/footer_bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer__menu{
+  margin: 0 auto;
+  max-width: 480px;
+  width: 100%;
+}
+.footer__menu ul {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__menu ul .menu__item + .menu__item {
+  margin-left: 0;
+}
+
+.social-icons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.social-icons .icons__item + .icons__item {
+  margin-left: 27px;
 }
