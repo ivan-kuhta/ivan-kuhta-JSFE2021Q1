@@ -60,7 +60,9 @@ h2{
 }
 
 h3{
-
+  color: var(--dark);
+  font-size: 2.7rem;
+  margin-bottom: 2.26em;
 }
 
 h4{
@@ -101,10 +103,22 @@ header{
   left: 0;
   right: 0;
   padding: 1.9rem 0;
+  /* background-color: #02160b; */
 }
 
 section{
   padding: 120px 0;
+  background-color: var(--light-gray);
+}
+
+input{
+  background-color: transparent;
+  border: 1px solid var(--gray);
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  font-size: 2.3rem;
+  outline: none;
+  color: var(--gray);
 }
 
 /* Btn style */
@@ -174,7 +188,6 @@ section{
 
 /* Latest */
 .latest{
-  background-color: var(--light-gray);
   text-align: center;
 }
 
@@ -217,4 +230,31 @@ section{
 .arrow__next{
   position: absolute;
   right: 0;
+}
+
+/* Notified */
+.notified{
+  text-align: center;
+  padding-bottom: 240px;
+}
+
+.form-notified{
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.form-notified__group{
+  display: flex;
+  height: 60px;
+}
+
+.form-notified__input{
+  width: 100%;
+}
+
+.form-notified__btn{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 1.441em;
+  padding-right: 1.441em;
 }
