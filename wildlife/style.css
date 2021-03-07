@@ -274,9 +274,6 @@ input{
   overflow: hidden;
   margin-right: 60px;
 }
-/* .slider__item + .slider__item {
-  margin-left: 60px;
-} */
 .slider__item-content{
   position: absolute;
   bottom: 40px;
@@ -364,4 +361,22 @@ footer{
 }
 .social-icons li + li {
   margin-left: 27px;
+}
+
+.social-icons .icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+.social-icons .icon.icon__facebook{
+  background-image: url('./assets/images/icons/facebook.svg');
+}
+.social-icons .icon.icon__instagram{
+  background-image: url('./assets/images/icons/instagram.svg');
+}
+.social-icons .icon.icon__pinterest{
+  background-image: url('./assets/images/icons/pinterest.svg');
+}
+.social-icons .icon.icon__telegram{
+  background-image: url('./assets/images/icons/telegram.svg');
 }
