@@ -13,7 +13,8 @@
   }
   padding: 0 60px;
   &__wrapper{
-    // max-width: 1020px;
+    max-width: 1080px;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
   }
@@ -29,6 +30,7 @@
     overflow: hidden;
     // margin-right: 60px;
     // margin: 0 30px;
+    min-width: 360px;
     &-inner{
       margin: 0 30px;
       position: relative;

@@ -412,6 +412,8 @@ button.btn--outline:active, .btn.btn--outline:active {
 }
 
 .carousel__wrapper {
+  max-width: 1080px;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -431,6 +433,7 @@ button.btn--outline:active, .btn.btn--outline:active {
 
 .carousel__item {
   overflow: hidden;
+  min-width: 360px;
 }
 
 .carousel__item-inner {
