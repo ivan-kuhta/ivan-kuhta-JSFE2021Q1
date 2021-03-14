@@ -123,12 +123,9 @@ class Carousel {
     const countItemsInWrapper = Math.floor(wrapper.offsetWidth / ( carouselItems[0] ? carouselItems[0].offsetWidth : 360));
     const widthItem = wrapper.offsetWidth / countItemsInWrapper;
 
-
-
     if(this.params.loop) {
       this.createClone(innerWrapper, carouselItems, countItemsInWrapper);
     }
-
 
     this.resizeItems(carousel, this.selectorCarouselItem, widthItem);
 
