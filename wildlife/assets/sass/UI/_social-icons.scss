@@ -1,0 +1,31 @@
+.social-icons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  li{
+    transition: transform .2s ease-in-out;
+    & + li {
+      margin-left: 27px;
+    }
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    &--facebook{
+      background-image: url('assets/images/icons/facebook.svg');
+    }
+    &--instagram{
+      background-image: url('assets/images/icons/instagram.svg');
+    }
+    &--pinterest{
+      background-image: url('assets/images/icons/pinterest.svg');
+    }
+    &--telegram{
+      background-image: url('assets/images/icons/telegram.svg');
+    }
+  }
+}
