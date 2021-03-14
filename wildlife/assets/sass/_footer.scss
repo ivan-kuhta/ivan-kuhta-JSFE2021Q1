@@ -1,0 +1,42 @@
+/* Footer */
+.footer{
+  padding: 150px 0;
+  background: url('assets/images/footer_bg.jpg') no-repeat;
+  background-color: #181617;
+  background-size: cover;
+  background-position: center;
+  @include breakpoint-down(medium) {
+    padding: 60px 0;
+  }
+  .row{
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+  }
+  &__menu{
+    margin: 0 auto;
+    max-width: 480px;
+    width: 100%;
+    ul {
+      justify-content: space-between;
+      width: 100%;
+      @include breakpoint-down(medium) {
+        margin: 20px 0;
+        flex-direction: column;
+      }
+      li {
+        @include breakpoint-down(medium) {
+          width: 100%;
+          margin: 0;
+          text-align: center;
+        }
+        & + li {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+

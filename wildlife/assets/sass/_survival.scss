@@ -1,0 +1,29 @@
+.survival{
+  background: url('assets/images/hero_bg.jpg') no-repeat;
+  background-color: #02160b;
+  background-size: cover;
+  background-position: center center;
+  height: 779px;
+  max-height: 100vh;
+  @include breakpoint-down(small) {
+    text-align: center;
+    h1{
+      color: $light;
+    }
+    .btn {
+      margin: 0 auto;
+    }
+  }
+  &__inner{
+    padding-top: 80px;
+    max-width: 274px;
+    @include breakpoint-down(small) {
+      max-width: 100%;
+    }
+  }
+  &__content {
+    p{
+      margin: 51px 0 49px 0;
+    }
+  }
+}

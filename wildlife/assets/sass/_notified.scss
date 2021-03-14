@@ -1,0 +1,30 @@
+.notified{
+  text-align: center;
+  padding-bottom: 240px;
+  .form-notified{
+    max-width: 661px;
+    margin: 0 auto;
+    &__group{
+      display: flex;
+      flex-wrap: wrap;
+      @include breakpoint-down(small){
+        & > * {
+          flex: 100%;
+        }
+      }
+    }
+    &__input{
+      flex: 1 0 80%;
+      border-right-color: transparent;
+      @include breakpoint-down(small){
+        border-color: $gray;
+      }
+    }
+    &__btn{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding-left: 1.441em;
+      padding-right: 1.441em;
+    }
+  }  
+}

@@ -1,0 +1,19 @@
+// Default
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+@import 'default';
+
+// UI components 
+@import 'UI/buttons';
+@import 'UI/menu';
+@import 'UI/logo';
+@import 'UI/carousel';
+@import 'UI/social-icons';
+
+// Blocks
+@import 'header';
+@import 'survival';
+@import 'latest';
+@import 'notified';
+@import 'footer';
