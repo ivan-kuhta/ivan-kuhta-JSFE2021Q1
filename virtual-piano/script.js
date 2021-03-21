@@ -122,8 +122,67 @@ class UI {
   }
 }
 
+class Piano {
+  static playSaund(url) {
+    new Audio(url).play();
+  }
+  static eventKey(key) {
+    if (
+      key.classList.contains(pianoKeySetting.classPianoKey) &&
+      !key.classList.contains(pianoKeySetting.activeClassPianoKey)
+    ) {
+      UI.addClass(key, pianoKeySetting.activeClassPianoKey);
+      Piano.playSaund(audioSetting.getUrl(key.dataset.note));
+
+      // Mouse
+      key.addEventListener("mouseout", () => UI.removeClass(key, pianoKeySetting.activeClassPianoKey));
+      key.addEventListener("mouseup", () => {
+        UI.removeClass(key, pianoKeySetting.activeClassPianoKey);
+      });
+    }
+  }
+
+  render() {
+    // Mouse
+    function eventMauseOverPiano(e) {
+      Piano.eventKey(e.target);
+    }
+    function removeEventMouseOverPiano() {
+      document.removeEventListener("mousemove", eventMauseOverPiano);
+    }
+
+    piano.addEventListener("mousedown", (e) => {
+      document.addEventListener("mousemove", eventMauseOverPiano);
+      piano.addEventListener("mouseup", removeEventMouseOverPiano);
+      let key = e.target;
+      Piano.eventKey(key);
+    });
+    document.addEventListener("mouseup", (e) => {
+      document.removeEventListener("mousemove", eventMauseOverPiano);
+      piano.removeEventListener("mouseup", removeEventMouseOverPiano);
+    });
+
+    // Keyboard
+    window.addEventListener("keydown", (e) => {
+      let key = pianoKeys.find((item) => `Key${item.dataset.letter}` == e.code);
+      if (key) {
+        Piano.eventKey(key);
+      }
+    });
+    window.addEventListener("keyup", (e) => {
+      let key = pianoKeys.find((item) => `Key${item.dataset.letter}` == e.code);
+      if (key) {
+        UI.removeClass(key, pianoKeySetting.activeClassPianoKey);
+      }
+    });
+  }
+}
+
 // App
 window.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
+  const piano = new Piano();
+
   ui.addClickEventBtns();
+  piano.render();
 });
