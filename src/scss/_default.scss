@@ -1,0 +1,168 @@
+// Variables
+@import 'variables';
+
+// <Mixins>
+@import 'mixins';
+// </Mixins>
+
+// <Fonts>
+// @import 'fonts';
+// <Load fonts>
+// &display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap");
+// </Load fonts>
+
+// <Default Fonts>
+$fontfamily: "Heebo";
+// </Default Fonts>
+
+// </Fonts>
+
+// <Variable>
+$minwidth: 320px;
+$mw: 1152;
+$maxWidthContainer: 856;
+$md1: $maxWidthContainer+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+// </Variable>
+
+// <Zeroing, General parameters>
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: $minwidth;
+    position: relative;
+    width: 100%;
+    color: #000000;
+    font-weight: 400;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    font-family: $fontfamily;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.lock {
+        overflow: hidden;
+
+        @media (max-width:$md3+px) {
+            width: 100%;
+            position: fixed;
+            overflow: hidden;
+        }
+    }
+}
+main, .page{
+    flex: 1;
+}
+
+input,
+button,
+textarea {
+    font-family: $fontfamily;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+// <Main Grid>
+.container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    
+    @media (max-width: $md1+px) {
+        max-width: 750px;
+    }
+
+    @media (max-width: $md2+px) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+// </Main Grid>
+
+// <Load file css, pages, elements>
+@import "ui";
+@import "header";
+@import "footer";
+// </Load file css, pages, elements>
