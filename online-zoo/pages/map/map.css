@@ -5,8 +5,8 @@
 @font-face {
   font-family: "icons";
   font-display: swap;
-  src: url("/assets/fonts/icons.eot?tef6bd");
-  src: url("/assets/fonts/icons.eot?tef6bd#iefix") format("embedded-opentype"), url("/assets/fonts/icons.ttf?tef6bd") format("truetype"), url("/assets/fonts/icons.woff?tef6bd") format("woff"), url("/assets/fonts/icons.svg?tef6bd#icons") format("svg");
+  src: url("../../assets/fonts/icons.eot?tef6bd");
+  src: url("../../assets/fonts/icons.eot?tef6bd#iefix") format("embedded-opentype"), url("../../assets/fonts/icons.ttf?tef6bd") format("truetype"), url("../../assets/fonts/icons.woff?tef6bd") format("woff"), url("../../assets/fonts/icons.svg?tef6bd#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
