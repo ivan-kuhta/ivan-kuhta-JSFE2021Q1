@@ -1,0 +1,86 @@
+<div class="map">
+  <div class="map__charts">
+    <img src="/assets/images/map/map.svg" alt="Map" class="map__charts-image">
+    <div class="map__charts-markers">
+      <div class="map__charts-marker" style="left: 10%; top: 14.8%" @@if(context.title){ title="Hawk" }>
+        <div class="map__charts-icon">
+          <img src="/assets/images/carousel/hawk.jpg" alt="Hawk" class="map__charts-icon__image">
+        </div>
+        @@if(!context.title){
+        <div class="map__charts-tooltip tooltip tooltip--left">
+          <div class="tooltip__inner">
+            <img src="/assets/images/map/zoo/hawk.jpg" alt="Hawk" class="tooltip__image">
+            <div class="tooltip__content">
+              <h4 class="tooltip__title">West End Bald Eagle</h4>
+              <div class="tooltip__info">
+                <p><b>Region:</b>on an island near Los Angeles</p>
+                <p><b>Population:</b>more than 270 pairs in 2013</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="map__charts-marker" style="left: 20.5%; top:21.5%" @@if(context.title){ title="Varan" }>
+        <div class="map__charts-icon">
+          <img src="/assets/images/carousel/varan.jpg" alt="Varan" class="map__charts-icon__image">
+        </div>
+        @@if(!context.title){
+        <div class="map__charts-tooltip tooltip tooltip--left">
+          <div class="tooltip__inner">
+            <img src="/assets/images/map/zoo/hawk.jpg" alt="Hawk" class="tooltip__image">
+            <div class="tooltip__content">
+              <h4 class="tooltip__title">West End Bald Eagle</h4>
+              <div class="tooltip__info">
+                <p><b>Region:</b>on an island near Los Angeles</p>
+                <p><b>Population:</b>more than 270 pairs in 2013</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="map__charts-marker" style="left: 47.5%; top:38%" @@if(context.title){ title="Gorilla" }>
+        <div class="map__charts-icon">
+          <img src="/assets/images/carousel/gorilla.jpg" alt="Gorilla" class="map__charts-icon__image">
+        </div>
+        @@if(!context.title){
+        <div class="map__charts-tooltip tooltip tooltip--left">
+          <div class="tooltip__inner">
+            <img src="/assets/images/map/zoo/hawk.jpg" alt="Hawk" class="tooltip__image">
+            <div class="tooltip__content">
+              <h4 class="tooltip__title">West End Bald Eagle</h4>
+              <div class="tooltip__info">
+                <p><b>Region:</b>on an island near Los Angeles</p>
+                <p><b>Population:</b>more than 270 pairs in 2013</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="map__charts-marker@@if(context.panda){ active}" style="left: 73.3%; top:18%" @@if(context.title){ title="Panda" }>
+        <div class="map__charts-icon">
+          <img src="/assets/images/carousel/panda.jpg" alt="Panda" class="map__charts-icon__image">
+        </div>
+        @@if(!context.title){
+        <div class="map__charts-tooltip tooltip tooltip--left">
+          <div class="tooltip__inner">
+            <img src="/assets/images/map/zoo/hawk.jpg" alt="Hawk" class="tooltip__image">
+            <div class="tooltip__content">
+              <h4 class="tooltip__title">West End Bald Eagle</h4>
+              <div class="tooltip__info">
+                <p><b>Region:</b>on an island near Los Angeles</p>
+                <p><b>Population:</b>more than 270 pairs in 2013</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="map__btns">
+    <a href="/pages/zoos/zoos.html" class="btn btn--gradient"><i class="icon icon-play"></i>watch online</a>
+  </div>
+</div>

@@ -1,0 +1,275 @@
+// <Mixins>
+@import 'mixins';
+// </Mixins>
+
+@import 'icons';
+
+// <Fonts>
+// @import 'fonts';
+// <Load fonts>
+// &display=swap&subset=cyrillic-ext
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:500);
+// </Load fonts>
+
+// <Default Fonts>
+$fontfamily: "Roboto";
+// </Default Fonts>
+
+// </Fonts>
+
+// <Variable>
+// $minwidth: 320;
+// $mw: 1152;
+// $maxWidthContainer: 856;
+// $md1: $maxWidthContainer+12;
+// $md2: 991.98;
+// $md3: 767.98;
+// $md4: 479.98;
+
+// $longMaxWidth: 1619;
+// </Variable>
+
+// <Zeroing, General parameters>
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a{
+    color: inherit;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    // min-width: $minwidth;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.2;
+    width: 100%;
+    color: $defaulColor;
+    font-weight: 400;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.2;
+    font-size: 14px;
+    font-family: $fontfamily;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+main, .page{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+input,
+button,
+textarea {
+    font-family: $fontfamily;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a{
+    display: block;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+// <Main Grid>
+.container {
+    max-width: $maxWidthXLargeBase + 40 + px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    @include breakpoint-down(large) {
+        max-width: $maxWidthLargeBase + px;
+    }
+
+    @include breakpoint-down(medium) {
+        width: 100%;
+    }
+    @include breakpoint-down(small) {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.long-container{
+    max-width: $maxWidthXLargeLong + 40 + px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    @include breakpoint-down(large) {
+        max-width: $maxWidthLargeLong + px;
+        .container{
+            padding: 0;
+        }
+    }
+
+    @include breakpoint-down(medium) {
+        width: 100%;
+    }
+    @include breakpoint-down(small) {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+.small-container{
+    max-width: $maxWidthXLargeSmall + 40 + px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    @include breakpoint-down(large) {
+        max-width: $maxWidthLargeSmall + 40 + px;
+        .container{
+            padding: 0;
+        }
+    }
+
+    @include breakpoint-down(medium) {
+        width: 100%;
+    }
+    @include breakpoint-down(small) {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+// </Main Grid>
+
+.flex-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-size: 89px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 37px;
+}
+.title, h2{
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: $colorHeaders;
+}
+.title{
+    &--center{
+        text-align: center;
+    }
+}
+*{
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+h3{
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: $colorHeaders;
+}
+h4{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+p{
+    color: inherit;
+}
+
+section{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.how-it-work{
+    text-align: left;
+}
+
+// <Load file css, pages, elements>
+@import 'forms';
+@import "ui";
+@import "header";
+@import "footer";
+// </Load file css, pages, elements>

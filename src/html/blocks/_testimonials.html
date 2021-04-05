@@ -1,0 +1,35 @@
+<section class="testimonials">
+  <div class="container">
+    <h2>Testimonials</h2>
+    @@include('../UI/_slider.html', {
+      "navigation": {
+        "navigationArrows": true,
+        "navigationDots": false
+      },
+      "template": "../elements/_testimonial.html",
+      "otherClass": "testimonials__items",
+      "data": [
+        {
+          "urlImage": "/assets/images/testimional/default.png",
+          "altImage": "Avatar #1",
+          "title": "Nastya Sidorova",
+          "text": "As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat."
+        },
+        {
+          "urlImage": "/assets/images/testimional/photo.jpg",
+          "altImage": "Avatar #2",
+          "title": "Vlad Kim",
+          "text": "As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat."
+        }
+      ],
+      "btns": [
+        '<button class="slider__link btn btn--gradient btn--no-icon">Leave feedback</button>'
+      ],
+      "settingPaginator": {
+        "max": 8,
+        "current": 2,
+        "width": "12.5%"
+      }
+    })
+  </div>
+</section>

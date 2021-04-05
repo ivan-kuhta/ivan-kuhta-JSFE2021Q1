@@ -1,0 +1,19 @@
+.testimonials{
+  text-align: center;
+  &__items{
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    min-height: 340px;
+    // margin-left: -13px;
+    // width: calc(100% + 26px);
+    .testimonial{
+      width: 100%;
+      min-height: 310px;
+      margin: 0 13px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

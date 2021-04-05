@@ -1,0 +1,5 @@
+<label class="pagination@@if(context.theme){ @@theme}">
+    @@settingPaginator
+    <output name="result">0@@if(context.current){@@current}/<span>0@@if(context.max){@@max}</span></output>
+    <input name="counter" type="range" min="1" max="@@if(context.max){@@max}" value="@@if(context.current){@@current}" />
+</label>

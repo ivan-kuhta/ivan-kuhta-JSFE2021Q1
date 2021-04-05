@@ -1,0 +1,46 @@
+@import 'variables-light';
+@import 'global';
+
+@import 'aside';
+
+.map-page {
+		&__wrapper {
+
+		}
+    &__container{
+      padding-top: 60px;
+      padding-bottom: 100px;
+      height: 100%;
+    }
+    &__slider{
+      margin: 0 auto;
+      width: calc(100% - 128px);
+      margin-top: 54px;
+      margin-bottom: 80px;
+      .slider__inner{
+        width: 100%;
+        justify-content: space-between;
+      }
+      .slider__navigation{
+        left: -64px;
+        right: -64px;
+      }
+    }
+
+		// .map-page__content
+
+		&__content {
+      h2{
+        text-align: center;
+      }
+		}
+    .map__charts-marker{
+      &:hover{
+        .tooltip{
+          display: none;
+        }
+      }
+    }
+}
+.container {
+}

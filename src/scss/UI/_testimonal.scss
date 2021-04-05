@@ -1,0 +1,29 @@
+.testimonial{
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
+  border-radius: 5px;
+  background-color: $colorWhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px;
+  &__wrapper{
+    max-width: 440px;
+  }
+  &__image{
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    border: 1px solid $avatarColor;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
+  &__title{
+    margin-bottom: 17px;
+  }
+  &__text{
+    text-align: left;
+  }
+}

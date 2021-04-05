@@ -1,0 +1,46 @@
+<div class="slider">
+  <div class="slider__wrapper">
+    <div class="@@if(context.otherClass){@@otherClass }slider__inner">
+      @@if(context.data) {
+        @@for (var i = 0; i < data.length; i++) {
+          @@include('@@template', `+(JSON.stringify(data[i]))+`)
+        }
+      }
+    </div>
+    @@if(context.navigation) {
+      <div class="slider__navigation">
+        @@if(context.navigation.navigationArrows) {
+        <div class="slider__arrows">
+          <div class="slider__arrow slider__arrow-left"><i class="icon icon-left-arrow"></i></div>
+          <div class="slider__arrow slider__arrow-right"><i class="icon icon-right-arrow"></i></div>
+        </div>
+        }
+        @@if(context.navigation.navigationDots) {
+          <div class="slider__dots">
+            @@for(var i = 0; i < 1; i++) {
+              <div class="slider__dot active"></div>
+            }
+            @@for(var i = 0; i < settingNavigation.lengthDots - 1; i++) {
+              <div class="slider__dot"></div>
+            }
+          </div>
+          }
+      </div>
+    }
+  </div>
+  @@if(context.settingPaginator){
+    <div class="slider__paginator">
+      <label class="pagination @@settingPaginator.theme">
+        <output name="result">0@@settingPaginator.current/<span>0@@settingPaginator.max</span></output>
+        <input name="counter" style="--widthThumb: @@settingPaginator.width" type="range" min="1" max="@@settingPaginator.max" value="@@settingPaginator.current" />
+      </label>
+    </div>
+  }
+  @@if(context.btns) {
+  <div class="slider__btns">
+      @@for(var i  = 0; i < btns.length; i++) {
+        `+btns[i]+`
+      }
+  </div>
+  } 
+</div>

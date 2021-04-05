@@ -1,0 +1,42 @@
+.tooltip{
+  background-color: $colorWhite;
+  box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+  padding: 44px;
+  color: $defaulColor;
+  text-align: left;
+  position: relative;
+  width: fit-content;
+  border-radius: 8px;
+  overflow: hidden;
+  &--rigth{
+    left: 50%;
+  }
+  &--left{
+    right: 50%;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+  &__image{
+    width: 65px;
+    height: 65px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  &__content{
+
+  }
+  &__title{
+    font-size: 18px;
+    font-weight: 900;
+    color: $colorHeaders;
+    margin-bottom: 7px;
+  }
+  &__info{
+    p{
+      margin-bottom: 5px;
+    }
+  }
+}

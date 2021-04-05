@@ -1,0 +1,13 @@
+<div class="slide @@if(context.otherClass) {@@otherClass}" >
+  @@if(context.title) { 
+    <h2>@@title</h2>
+  }
+  @@if(context.text) { 
+    <p>@@text</p>
+  }
+  @@if(context.urlImage) {
+    <div class="slide__image">
+      <img src="@@urlImage" alt="@@altImage">
+    </div>
+  }
+</div>

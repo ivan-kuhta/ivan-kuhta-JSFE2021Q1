@@ -1,5 +1,55 @@
 <footer class="footer">
-  <div class="footer__content container">
-    Footer
+  <div class="footer__content long-container">
+    <div class="footer__wrapper">
+      <a href="#top">
+        <div class="footer__logo logo">
+            <span>zoo</span>
+            <span>online</span>
+        </div>
+      </a>
+      <div class="footer__menu menu">
+        <nav class="menu__body">
+          <ul class="menu__list">
+            <li><a href="/pages/about/about.html" class="menu__link">About</a></li>
+            <li><a href="/pages/zoos/zoos.html" class="menu__link">Zoos</a></li>
+            <li><a href="/pages/map/map.html" class="menu__link">Map</a></li>
+            <li><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="menu__link">Design</a></li>
+          </ul>
+        </nav>
+        <div class="footer__btns">
+          <button class="btn btn--gradient footer__btn">donate for volunteers</button>
+        </div>
+      </div>
+
+      <div class="footer__form-block" id="contact-us">
+        <h3 class="footer__title">Contact us</h3>
+        <form class="footer__form form">
+          <input type="text" name="name" class="footer__form-input" placeholder="Name" required>
+          <input type="email" name="email" class="footer__form-input" placeholder="Email" required>
+          <fieldset class="footer__form-fieldset">
+            <legend class="footer__form-legend">Please enter your message</legend>
+            <textarea type="email" name="message" class="footer__form-textarea" required maxlength="280"></textarea>
+          </fieldset>
+          <label class="footer__form-label">
+            <input type="checkbox" name="agree" class="footer__form-checkbox" required>I agree to the processing of Personal Data
+          </label>
+          <button type="submit" class="footer__form-btn btn">Send<i class="icon-arrow-long"></i></button>
+        </form>
+      </div>
+      <div class="footer__info-block">
+        <h4 class="footer__title">ZOO Online Centre</h4>
+        <address>
+          <div class="footer__address">
+            <p>132, Address District, Street<br>Open Daily 10:00 am - 5:00 pm</p>
+          </div>
+          <div class="footer__info">
+            <p><a href="tel:7021633433">T(702) 163-3433</a><br><a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a></p>
+          </div>
+        </address>
+        <div class="footer__social-icons">
+          @@include('./UI/_social-icons.html')
+        </div>
+      </div>      
+    </div>
   </div>
 </footer>

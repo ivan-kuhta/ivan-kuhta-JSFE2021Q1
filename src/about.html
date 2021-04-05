@@ -5,8 +5,17 @@
 "nameStyleFile": "about"
 })
 <body>
-    @@include('html/_header.html')
+    @@include('html/_header.html', {
+        "activeLink": 1
+    })
     <main>
+        @@include('html/blocks/_hello.html')
+        @@include('html/blocks/_how-it-work.html')
+        @@include('html/blocks/_inspire.html')
+        @@include('html/blocks/_pets-zoo.html')
+        @@include('html/blocks/_pay.html')
+        @@include('html/blocks/_testimonials.html')
+        @@include('html/blocks/_map.html')
     </main>
     @@include('html/_footer.html')
     @@include('html/_scripts.html', {

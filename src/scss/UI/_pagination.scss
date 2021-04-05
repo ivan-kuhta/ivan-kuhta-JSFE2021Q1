@@ -1,0 +1,94 @@
+.pagination {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &.light{
+    input[type=range]::-webkit-slider-thumb {
+      background-color: $colorWhite;
+      &:hover{
+        background-color: #dbdbdb;
+      }
+    }
+    input[type=range]::-moz-range-thumb {
+      background-color: $colorWhite;
+      &:hover{
+        background-color: #dbdbdb;
+      }
+    }
+    output{
+      color: $colorWhite;
+    }
+  }
+
+  input[type=range] {
+    display: block;
+    appearance: none;
+    height: 3px;
+    background-color: #a2abb3;
+    margin-top: 22px;
+    outline: none;
+    border-radius: 0.25rem;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    width: var(--widthThumb);
+    background-color: #313940;
+    transition: all .3s ease-in-out;
+    border-radius: 0;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    transition: all .3s ease-in-out;
+    &:hover{
+      background-color: #434e57;
+    }
+  }
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    width: var(--widthThumb);
+    background-color: #313940;
+    border-radius: 0;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    transition: all .3s ease-in-out;
+    &:hover{
+      background-color: #434e57;
+    }
+  }
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    // border: 1px solid #000000;
+    // height: 36px;
+    // width: 16px;
+    // border-radius: 3px;
+    // background: #ffffff;
+    // cursor: pointer;
+    // border-radius: 0;
+    // margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; 
+  }
+
+  output{
+    font-weight: 900;
+    font-size: 24px;
+    color: $colorHeaders;
+    span{
+      font-size: 14px;
+      color: $colorGray;
+    }
+  }
+}

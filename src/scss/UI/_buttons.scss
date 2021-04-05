@@ -1,0 +1,115 @@
+.btn{
+  @extend .flex-center;
+  justify-content: center;
+  border: none;
+  padding: 0.6em 1em;
+  text-align: center;
+  color: $defaulColor;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  background-color: transparent;
+  background-image: none;
+  min-width: 245px;
+  height: fit-content;
+  &--no-icon{
+    padding: 0.95em;
+  }
+  i{
+    border: 1px solid $defaulColor;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-size: 10px;
+    padding: 0.9em;
+    min-width: 24px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+  }
+  .icon{
+    &--dollar{
+      padding: 0;
+      font-size: 18px;
+    }
+  }
+  &--transparen{
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0;
+    i{
+      font-size: 8px;
+    }
+    &:hover{
+      color: $hoverGreen;
+      i{
+        border-color: $hoverGreen;
+      }
+    }
+  }
+  &--gradient{
+    color: $btnColor;
+    background-image: $btnBgGradien;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    &:hover{
+      opacity: 0.8;
+    }
+    i{
+      border-color: $btnColor;
+    }
+  }
+
+  &--switch{
+    background-image: none;
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 30px;
+    min-width: auto;
+    input {display:none;}
+    /* The switch */
+    .switch {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    &:hover{
+      .switch:before {
+        background-color: #f0f0f0;
+      }
+    }
+    .switch:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 5px;
+      bottom: 5px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+      transition: all .3s ease-in-out;
+    }
+    
+    input:checked + .switch {
+      background-color: $defaulColor;
+    }
+    
+    input:checked + .switch:before {
+      background-color: $colorBlack;
+      -webkit-transform: translateX(23px);
+      -ms-transform: translateX(23px);
+      transform: translateX(23px);
+    }
+  }
+}

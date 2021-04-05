@@ -1,0 +1,8 @@
+.inspire{
+  background-color: $colorGrayLight;
+  padding-bottom: 116px;
+  &__cards{
+    @extend .flex-center;
+    align-items: flex-start;
+  }
+}

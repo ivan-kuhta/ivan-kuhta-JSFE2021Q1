@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.html', {
+"title": "Intermediate Page",
+"nameStyleFile": "map"
+})
+<body>
+    @@include('html/_header.html', {
+        "activeLink": 3
+    })
+    <main class="main map-page">
+      <div class="map-page__container container">
+        <div class="map-page__wrapper">
+          <div class="map-page__content small-container">
+            <h2>Choose your favorite</h2>
+            <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects, including providing veterinary support and raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
+          </div>
+          <div class="map-page__slider">
+            @@include('html/UI/_slider.html', {
+              "navigation": {
+                "navigationArrows": true
+              },
+              "template": "../elements/_aside-item.html",
+              "data": [
+                {
+                  "urlImage": "/assets/images/carousel/Gorilla.jpg",
+                  "altImage": "Gorilla",
+                  "linkPage": "#"
+                },
+                {
+                  "urlImage": "/assets/images/carousel/Panda.jpg",
+                  "altImage": "Panda",
+                  "active": true,
+                  "linkPage": "#"
+                },
+                {
+                  "urlImage": "/assets/images/carousel/Varan.jpg",
+                  "altImage": "Varan",
+                  "linkPage": "#"
+                },
+                {
+                  "urlImage": "/assets/images/carousel/Hawk.jpg",
+                  "altImage": "Hawk",
+                  "linkPage": "#"
+                },
+                {
+                  "urlImage": "/assets/images/carousel/Tigre.jpg",
+                  "altImage": "Tigre",
+                  "linkPage": "#"
+                },
+                {
+                  "urlImage": "/assets/images/carousel/Elephant.jpg",
+                  "altImage": "Elephant",
+                  "linkPage": "#"
+                },
+                {
+                  "urlImage": "/assets/images/carousel/Lion.jpg",
+                  "altImage": "Lion",
+                  "linkPage": "#"
+                },
+                {
+                  "urlImage": "/assets/images/carousel/Zebra.jpg",
+                  "altImage": "Zebra",
+                  "linkPage": "#"
+                }
+              ],
+              "settingPaginator": {
+                "max": 8,
+                "current": 2,
+                "width": "12.5%"
+              }
+            })
+          </div>
+          <div class="map-page__map">
+          @@include('./html/elements/_map-chart.html', {"panda": true, "title": true});
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    @@include('html/_footer.html')
+    @@include('html/_scripts.html', {
+        "nameScriptFile": "map"
+    })
+</body>

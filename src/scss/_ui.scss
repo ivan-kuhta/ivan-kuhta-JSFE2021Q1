@@ -1,3 +1,15 @@
+@import 'UI/buttons';
+@import 'UI/menu';
+@import 'UI/social-icons';
+@import 'UI/slider';
+@import 'UI/pagination';
+@import 'UI/card';
+@import 'UI/picture';
+@import 'UI/testimonal';
+@import 'UI/tooltip';
+@import 'UI/gallery';
+@import 'UI/map';
+
 .ibg{
     background-position: center;
     background-size: cover;
@@ -8,6 +20,22 @@
 }
 
 // Other elements
+.logo{
+    color: inherit;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    line-height: 0.9;
+    span:first-child{
+        font-size: 36px;
+    }
+    span:last-child{
+        font-size: 18px;
+        letter-spacing: 18 * 8/100 + px;
+    }
+}
 // .text {
 //     font-size: 16px;
 //     line-height: 23 / 16 * 100%;

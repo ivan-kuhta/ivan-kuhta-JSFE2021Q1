@@ -1,0 +1,88 @@
+.slider{
+  height: 100%;
+  &__wrapper{
+    height: 100%;
+    // overflow: hidden;
+    position: relative;
+  }
+  &__inner{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__navigation{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50px;
+    right: -50px;
+    display: flex;
+    z-index: 1;
+  }
+  &__dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  &__dot{
+    width: 8px;
+    height: 8px;
+    background-color: $dotsColor;
+    margin-right: 5px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &.active, &:hover{
+      width: 11px;
+      height: 11px;
+      background-image: $btnBgGradien;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &__arrows{
+    margin: auto 0;
+    // font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    // margin: auto 0;
+  }
+  &__arrow{
+    font-size: 30px;
+    color: $colorGray;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    &:hover{
+      color: $defaulColor;
+    }
+  }
+  &__btns, &__paginator {
+    max-width: 245px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+.slide{
+  width: 100%;
+  color: $defaulColor;
+  .slide__image{
+    margin-top: 30px;
+    height: 323px;
+    overflow: hidden;
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+}

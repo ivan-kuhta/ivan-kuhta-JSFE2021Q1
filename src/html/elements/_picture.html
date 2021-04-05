@@ -1,0 +1,16 @@
+<div class="slide picture@@if(context.active){ active}">
+  <div class="picture__bg"> 
+    <img src="@@urlImage" alt="@@altImage">
+  </div>
+  <div class="picture__wrapper">
+    <div class="picture__info">
+      @@if(context.text) { 
+        <p>@@text</p>
+      }
+    </div>
+    <div class="picture__btns">
+      <a href="@@linkPage" class="picture__btn btn btn--transparen"><i class="icon icon-play"></i>watch online</a>
+      <button class="picture__btn btn btn--transparen"><i class="icon icon--dollar">$</i>donate</button>
+    </div>
+  </div>
+</div>
