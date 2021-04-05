@@ -12,11 +12,11 @@ body {
     text-align: right;
 }
 
-.header img {
+.header__image {
     width: 100%;
 }
 
-.header .link-more {
+.header__link-more {
     font-family: fantasy, cursive;
 }
 
@@ -34,13 +34,14 @@ body {
     margin: 0 auto 0;
 }
 
-.task {
+.form__input,
+.form__label {
     width: 56%;
     display: inline-block;
     flex-grow: 1
 }
 
-.display-flex {
+.main__row {
     display: flex;
 }
 
@@ -142,13 +143,13 @@ li>input[type="text"] {
     width: 226px
 }
 
-.delete img {
+.btn__delete img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-.delete img:hover {
+.btn__delete img:hover {
     transform: rotateZ(0);
 }
 
@@ -163,11 +164,11 @@ ul li input[type=text] {
     display: none
 }
 
-.edit-mode input[type=text] {
+.editing input[type=text] {
     display: inline-block;
     width: 224px
 }
 
-.edit-mode label {
+.editing label {
     display: none;
 }
