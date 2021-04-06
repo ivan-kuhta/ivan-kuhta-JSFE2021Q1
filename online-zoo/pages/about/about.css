@@ -1042,12 +1042,16 @@ input[type="email"] {
 }
 
 .gallery .slider .slider__wrapper .picture:not(.active):hover .picture__bg:after {
-  opacity: 0;
+  background-color:rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 .gallery .slider .slider__wrapper .picture.active {
   min-width: 245px;
   height: 352px;
+}
+.gallery .picture:not(.active){
+  cursor: pointer;
 }
 
 .gallery .pagination{
