@@ -1110,7 +1110,9 @@ input[type="email"] {
      object-fit: cover;
   margin-top: 13px;
 }
+.map h2{
 
+}
 .map__charts-tooltip {
   display: none;
   position: absolute;
@@ -1164,11 +1166,11 @@ input[type="email"] {
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
           box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-  padding: 26px 0;
+  padding: 24px 0;
 }
 
 .header__menu {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   color: #3C3C3C;
   border-color: #3C3C3C;
 }
@@ -1195,12 +1197,17 @@ input[type="email"] {
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.97fr;
   grid-template-areas: "logo menu" "form info";
+  padding-bottom: 54px;
+  border-bottom: 0.5px solid #FEFEFE;
 }
 
 .footer__logo {
   grid-area: logo;
+}
+.footer__btn{
+  padding: 1.2em 1.3em;
 }
 
 .footer__menu {
@@ -1231,10 +1238,11 @@ input[type="email"] {
 
 .footer__form-input {
   border-bottom: 1px solid #BDBDBD;
+  margin-bottom: 5px;
 }
 
 .footer__form-textarea {
-  min-height: 104px;
+  min-height: 75px;
 }
 
 .footer__form-label {
@@ -1283,6 +1291,7 @@ input[type="email"] {
   border: 1px solid #BDBDBD;
   border-radius: 3px;
   margin-bottom: 25px;
+  margin-top: 20px;
 }
 
 .footer__form-legend {
@@ -1299,26 +1308,38 @@ input[type="email"] {
   min-width: auto;
   margin-left: auto;
   padding: 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .footer__form-btn i {
-  margin-left: 24px;
+  width: 55px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 23px;
   border: none;
 }
 
 .footer__form-block {
   grid-area: form;
-  margin-top: 57px;
+  margin-top: 58px;
 }
 
 .footer__info-block {
   grid-area: info;
-  margin-top: 57px;
+  margin-top: 58px;
 }
 
 .footer__title {
   color: inherit;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
+}
+
+.footer__copyright{
+  font-size: 12px;
+  color: #BDBDBD;
+  padding-top: 28px;
 }
 
 .footer__address {
@@ -1472,6 +1493,12 @@ input[type="email"] {
   margin-top: 54px;
   margin-bottom: 80px;
 }
+.map-page__slider .pagination{
+  transform: translateX(-20px);
+}
+.map-page__slider .slider__paginator{
+  margin-top: 20px;
+}
 
 .map-page__slider .slider__inner {
   width: 100%;
@@ -1487,6 +1514,7 @@ input[type="email"] {
 
 .map-page__content h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .map-page .map__charts-marker:hover .tooltip {

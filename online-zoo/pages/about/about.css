@@ -697,7 +697,7 @@ input[type="email"] {
           appearance: none;
   height: 3px;
   background-color: #a2abb3;
-  margin-top: 22px;
+  margin-top: 18px;
   outline: none;
   border-radius: 0.25rem;
   -webkit-transition: 0.3s;
@@ -991,18 +991,19 @@ input[type="email"] {
 
 .gallery {
   position: absolute;
-  bottom: 111px;
+  bottom: 116px;
   right: -44px;
 }
 
 .gallery .slider .slider__paginator {
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
 .gallery .slider .slider__wrapper {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding-left: 90px;
 }
 
 .gallery .slider .slider__wrapper:after {
@@ -1047,6 +1048,10 @@ input[type="email"] {
 .gallery .slider .slider__wrapper .picture.active {
   min-width: 245px;
   height: 352px;
+}
+
+.gallery .pagination{
+  transform: translateX(-119px);
 }
 
 .map__charts {
@@ -1165,11 +1170,11 @@ input[type="email"] {
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
           box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-  padding: 26px 0;
+  padding: 24px 0;
 }
 
 .header__menu {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   color: #3C3C3C;
   border-color: #3C3C3C;
 }
@@ -1196,12 +1201,17 @@ input[type="email"] {
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.97fr;
   grid-template-areas: "logo menu" "form info";
+  padding-bottom: 54px;
+  border-bottom: 0.5px solid #FEFEFE;
 }
 
 .footer__logo {
   grid-area: logo;
+}
+.footer__btn{
+  padding: 1.2em 1.3em;
 }
 
 .footer__menu {
@@ -1232,10 +1242,11 @@ input[type="email"] {
 
 .footer__form-input {
   border-bottom: 1px solid #BDBDBD;
+  margin-bottom: 5px;
 }
 
 .footer__form-textarea {
-  min-height: 104px;
+  min-height: 75px;
 }
 
 .footer__form-label {
@@ -1284,6 +1295,7 @@ input[type="email"] {
   border: 1px solid #BDBDBD;
   border-radius: 3px;
   margin-bottom: 25px;
+  margin-top: 20px;
 }
 
 .footer__form-legend {
@@ -1300,26 +1312,38 @@ input[type="email"] {
   min-width: auto;
   margin-left: auto;
   padding: 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .footer__form-btn i {
-  margin-left: 24px;
+  width: 55px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 23px;
   border: none;
 }
 
 .footer__form-block {
   grid-area: form;
-  margin-top: 57px;
+  margin-top: 58px;
 }
 
 .footer__info-block {
   grid-area: info;
-  margin-top: 57px;
+  margin-top: 58px;
 }
 
 .footer__title {
   color: inherit;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
+}
+
+.footer__copyright{
+  font-size: 12px;
+  color: #BDBDBD;
+  padding-top: 28px;
 }
 
 .footer__address {
@@ -1345,8 +1369,12 @@ input[type="email"] {
   padding: 206px 0px 111px 0px;
   position: relative;
   text-align: left;
+  background-image: url('../../assets/images/about/hello-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
+/* 
 .hello__bg {
   position: absolute;
   top: 0;
@@ -1355,7 +1383,7 @@ input[type="email"] {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
+} */
 
 .hello__inner {
   position: relative;
@@ -1380,7 +1408,7 @@ input[type="email"] {
 
 .inspire {
   background-color: #F2F2F2;
-  padding-bottom: 116px;
+  padding-bottom: 125px;
 }
 
 .inspire__cards {
@@ -1395,6 +1423,9 @@ input[type="email"] {
 
 .pets-zoo .slider__wrapper {
   height: 399px;
+}
+.pets-zoo h2 {
+  margin-bottom: 35px;
 }
 
 .pay {
@@ -1474,6 +1505,9 @@ input[type="email"] {
       -ms-flex-align: center;
           align-items: center;
 }
+.pay__btn{
+  padding: 1.2em 1em;
+}
 
 .pay__arrow {
   width: 100%;
@@ -1511,10 +1545,16 @@ input[type="email"] {
   min-height: 340px;
 }
 
+.testimonials .pagination{
+  margin-top: 40px;
+}
+
 .testimonials__items .testimonial {
   width: 100%;
   min-height: 310px;
-  margin: 0 13px;
+  /* margin: 0 13px; */
+  margin-right: 26px;
+  align-items: flex-start;
 }
 
 .testimonials__items .testimonial:last-child {
@@ -1523,6 +1563,9 @@ input[type="email"] {
 
 .map-section {
   background-color: #F2F2F2;
+}
+.map-section h2{
+  margin-bottom: 60px;
 }
 
 @media (max-width: 1200px) {
